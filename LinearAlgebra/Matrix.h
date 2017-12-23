@@ -23,6 +23,16 @@ namespace Math
 	{
 		return Matrix{m2 * m1.i, m2 * m1.j};
 	}
+
+	float determinant(Matrix m)
+	{
+		return (i.x * j.y) - (j.x  * i.y)
+	}
+
+	unsigned int rank(Matrix m)
+	{
+		return determinant(m) == 0 ? 1 : 2;
+	}
 }
 
 #endif /* END MATRIX_H */
