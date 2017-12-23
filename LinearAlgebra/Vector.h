@@ -39,6 +39,11 @@ namespace Math
 		float gradientOfB = b.y / b.x;
 		return gradientOfA == gradientOfB;
 	}
+
+	bool linearlyIndependant(Vector a, Vector b)
+	{
+		return !linearlyDependant(a,b);
+	}
 }
 
 #endif /* END VECTOR_H */
